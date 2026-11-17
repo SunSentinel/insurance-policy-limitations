@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Policy Limits Graphic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --text-color: #333333;
+            --note-color: #777777; 
+            --bg-color: #F4F1EA;
+            --doc-bg: #ffffff;
+            --doc-border: #e0e0e0;
+            --highlight: #C8102E;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .graphic-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--bg-color);
+        }
+
+        .headline {
+            font-family: 'Archivo', sans-serif;
+            font-size: 26px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .intro {
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 400;
+            color: var(--text-color);
+            letter-spacing: -0.01em;
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--highlight);
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        .section-intro {
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 400;
+            color: var(--text-color);
+            letter-spacing: -0.01em;
+            margin-bottom: 25px;
+        }
+
+        .example-context {
+            font-family: 'Archivo', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .company-name {
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #000000;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .document-box {
+            background-color: var(--doc-bg);
+            border: 1px solid var(--doc-border);
+            border-top: 3px solid #ccc;
+            box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            border-radius: 2px;
+        }
+
+        .policy-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14.5px;
+            line-height: 1.5;
+            color: #222222;
+            margin: 0;
+        }
+
+        .policy-text p {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .policy-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .indent-1 {
+            margin-left: 20px;
+        }
+
+        .indent-2 {
+            margin-left: 40px;
+        }
+
+        /* New utility classes for underline and hanging indents */
+        .underline {
+            text-decoration: underline;
+        }
+
+        .hanging-indent {
+            padding-left: 22px;
+            text-indent: -22px;
+        }
+
+        .note {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 13px;
+            line-height: 1.4;
+            color: var(--note-color);
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .overall-note {
+            margin-top: 50px;
+            border-top: 1px solid #dcd8ce;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="graphic-container">
+    
+    <div class="headline">How insurers limit what your homeowner’s policy covers</div>
+    <div class="intro">Over the past decade, Florida insurers with the approval of state regulators have put stricter limits on how much a homeowner can get paid for a damage claim. The language imposing these limits varies by company. Here are some key examples.</div>
+
+    <!-- WATER DAMAGE CAP SECTION -->
+    <div class="section-header">WATER DAMAGE CAP</div>
+    <div class="section-intro">A $10,000 maximum payout on water damage, once rare, is now common. Some companies impose it only on older homes.</div>
+
+    <div class="company-name">American Integrity Insurance Co., 2026</div>
+    <div class="document-box">
+        <div class="policy-text">
+            <p class="underline">OTHER LIMITATIONS</p>
+            <p>Sl0,000 limit on nonweather water losses -If your policy includes the Limited Water Damage endorsement, your policy contains a limit on covered losses caused by accidental discharge or water of $10,000. Payment for reasonable emergency measures will be deducted from the $10,000 limit on coverage.Please read your policy carefully for specific information.</p>
+        </div>
+    </div>
+
+    <div class="company-name">Citizens Property Insurance, 2025</div>
+    <div class="document-box">
+        <div class="policy-text">
+            <p class="hanging-indent">1. A $10,000 limit on coverage applies and is the most we will pay for: Each covered direct physical loss from all water or steam in paragraphs 2.c.(6) and 2.c.(9) above; and b. All cosmetic and aesthetic damage, which occurs in the same loss as 3.a. above, including any repair or replacement of items to match quality, color, or size. Payment for Reasonable Emergency Measures under SECTION I Property Coverages Paragraph E.1. , which occurs in the same loss as 3.a. above, will be deducted from the $10,000 limit on coverage.</p>
+        </div>
+    </div>
+    
+    <div class="note">NOTE: Citizens removes the water cap for policyholders who agree to participate in its managed-repair network, which allows the insurer to choose the contractor to fix any damage.</div>
+
+    <!-- APPRAISAL RESTRICTIONS SECTION -->
+    <div class="section-header">APPRAISAL RESTRICTIONS</div>
+    <div class="section-intro">When a policyholder disagrees with an insurer over the cost of repairs, one option is to seek an independent appraisal. But some insurers place limits on the process.</div>
+
+    <div class="example-context">EXAMPLE 1: Only insurer can demand appraisal</div>
+    <div class="company-name" style="margin-top: 5px;">State Farm Florida Insurance, 2025</div>
+    <div class="document-box">
+        <div class="policy-text">
+            <p class="hanging-indent">4. Appraisal. If you and we fail to agree on the amount of any loss under SECTION I - PROPERTY COVERAGES, we can demand that the amount of the loss be set by appraisal. Our demand for appraisal must be in writing. If we demand appraisal…</p>
+        </div>
+    </div>
+
+    <div class="example-context" style="margin-top: 35px;">EXAMPLE 2: Either insurer or homeowner can request appraisal</div>
+    <div class="company-name" style="margin-top: 5px;">Manatee Insurance Exchange, 2023</div>
+    <div class="document-box">
+        <div class="policy-text">
+            <p>B. Appraisal.</p>
+            <p class="indent-1">Appraisal is an alternate dispute resolution method to address and resolve disagreement regarding the amount of the covered loss.</p>
+            <p class="indent-2 hanging-indent">1. If you and we do not agree on the amount of loss, then either may request an appraisal of the loss. In this event, each party will choose a competent and impartial appraiser within 20 days after receiving a written request from the other. The appraisers will separately set the amount of the loss. If the appraisers submit a written report of an agreement to us, the amount agreed upon will be the amount of the loss. If the two appraisers fail to agree, they will choose a competent and impartial umpire, and failing to agree upon such umpire within 15 days, you or we may request that the choice be made by a judge of a court of record located in the county described in the location of the "residence premises" of your Declarations. The two appraisers will submit their differences to the umpire. An award signed by any two will set the amount of loss.</p>
+        </div>
+    </div>
+
+    <!-- MATCHING LIMITS SECTION -->
+    <div class="section-header">MATCHING LIMITS</div>
+    <div class="section-intro">Many companies have adopted tight limits on what can be called "cosmetic" repairs — but homeowners often find such repairs critical to restoring roofs, floors or cabinetry to pre-damage conditions.</div>
+
+    <div class="company-name">Slide Insurance Co., 2024</div>
+    <div class="document-box">
+        <div class="policy-text">
+            <p>For HOMEOWNERS 3 -SPECIAL FORM:</p>
+            <p>The total limit of liability for Coverages A and Bis 1% of the Coverage A limit of liability for repairs or replacements of any undamaged part of the building or its components solely to match repairs made to damage as a result of a covered loss.</p>
+            <p>This limitation does not increase the Coverage A or Coverage B limits of liability shown on the Declarations page, nor does it apply to damage otherwise limited or excluded.</p>
+        </div>
+    </div>
+
+    <!-- OVERALL NOTE -->
+    <div class="note overall-note">Some companies may have changed policy language or terms since the excerpted policies were in force.</div>
+
+</div>
+
+</body>
+</html>
