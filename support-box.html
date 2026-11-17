@@ -80,21 +80,30 @@
     document.getElementById('donate-link').addEventListener('click', function(e) {
         e.preventDefault();
         
-        // Default fallback URL if the browser blocks reading the parent URL
+        // Absolute fallback ensures it never goes to github.io
         let targetUrl = 'https://www.sun-sentinel.com/donate'; 
         
-        // Check what site embedded this iframe
-        if (document.referrer) {
-            try {
-                // Extract just the root domain (e.g., https://www.orlandosentinel.com)
-                let parentOrigin = new URL(document.referrer).origin;
-                targetUrl = parentOrigin + '/donate';
-            } catch (err) {
-                // Fail silently and use the Sun-Sentinel fallback if parsing fails
+        try {
+            let parentUrl = "";
+            
+            // Method 1: Check ancestor origins (Works in Chrome/Edge/Safari)
+            if (window.location.ancestorOrigins && window.location.ancestorOrigins.length > 0) {
+                parentUrl = window.location.ancestorOrigins[0];
+            } 
+            // Method 2: Fallback to document referrer (Works in Firefox)
+            else if (document.referrer) {
+                parentUrl = new URL(document.referrer).origin;
             }
+
+            // If embedded on Orlando Sentinel, swap to their donate page
+            if (parentUrl.includes("orlandosentinel.com")) {
+                targetUrl = 'https://www.orlandosentinel.com/donate';
+            }
+        } catch (err) {
+            // If parent frame checking is strictly blocked, fail silently and use Sun Sentinel
         }
         
-        // Redirect the main article window to the correct domain's /donate page
+        // Execute the redirect on the main parent window
         window.top.location.href = targetUrl;
     });
 </script>
