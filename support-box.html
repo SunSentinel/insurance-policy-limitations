@@ -72,9 +72,32 @@
 <div class="donation-box">
     <div class="donation-header">Support Journalism Like This</div>
     <p class="donation-text">
-        "Uncovered" is just one example of how local news informs our communities and ensures transparency. Help us continue holding power accountable across Florida. Make a tax-deductible contribution to our Community News Fund <a href="/support" target="_top">here</a>.
+        "Uncovered" is just one example of how local news informs our communities and ensures transparency. Help us continue holding power accountable across Florida. Make a tax-deductible contribution to our Community News Fund <a href="https://www.sun-sentinel.com/donate" id="donate-link" target="_top">here</a>.
     </p>
 </div>
+
+<script>
+    document.getElementById('donate-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Default fallback URL if the browser blocks reading the parent URL
+        let targetUrl = 'https://www.sun-sentinel.com/donate'; 
+        
+        // Check what site embedded this iframe
+        if (document.referrer) {
+            try {
+                // Extract just the root domain (e.g., https://www.orlandosentinel.com)
+                let parentOrigin = new URL(document.referrer).origin;
+                targetUrl = parentOrigin + '/donate';
+            } catch (err) {
+                // Fail silently and use the Sun-Sentinel fallback if parsing fails
+            }
+        }
+        
+        // Redirect the main article window to the correct domain's /donate page
+        window.top.location.href = targetUrl;
+    });
+</script>
 
 </body>
 </html>
